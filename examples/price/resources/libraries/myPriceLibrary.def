@@ -1,0 +1,7 @@
+[!def
+    ~~~
+    function roundPrice ( price ) {
+        return numberUtils.formatFloat ( price, "###,###,##0.00" );
+    }
+    ~~~
+]

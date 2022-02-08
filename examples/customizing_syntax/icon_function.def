@@ -1,0 +1,7 @@
+[!def
+    ~~~
+    function icon ( path ) {
+        doc.insert ( `[image source="${path}" width=64 height=64 border=yes]` );
+    }
+    ~~~
+]
