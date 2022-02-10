@@ -3,8 +3,8 @@
     Besides executing OS [i programs], you can also execute OS [i scripts], by simply providing the OS's script code.
     This works on Linux and Windows, but you need of course to provide the correct OS-dependent code.
 
-    Here is a simple example of inserting the result of a Windows [c dir] command into a [!get PML_link] [c monospace] node:
-    [insert_code file=[!get examples_dir]directory_listing/dir_example.pml]
+    Here is a simple example of inserting the result of a Windows [c dir] command into a [u:get PML_link] [c monospace] node:
+    [insert_code file=[u:get examples_dir]directory_listing/dir_example.pml]
 
     The (truncated) result looks like this:
     [code
@@ -22,5 +22,5 @@
     code]
 
     The above code could also be written as a one-liner (NOT recommended):
-    [insert_code file=[!get examples_dir]directory_listing/dir_example_one_liner.pml]
+    [insert_code file=[u:get examples_dir]directory_listing/dir_example_one_liner.pml]
 ]

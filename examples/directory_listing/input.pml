@@ -3,7 +3,7 @@
 
     Simplest possible:
 
-    [!script
+    [s:script
         ~~~
         var result = WinCmdUtils.getInstructionsOutput ( "dir", null, null );
         // stdout.writeLine ( result );
@@ -13,7 +13,7 @@
 
     Echo off
 
-    [!script
+    [s:script
         ~~~
         const cmd = `@echo off
         dir`
@@ -24,14 +24,14 @@
 
     Monospace:
     
-    [!ins-file path=dir_example.pml]
+    [u:ins-file path=dir_example.pml]
 
-    [!ins-file path=dir_example_one_liner.pml]
+    [u:ins-file path=dir_example_one_liner.pml]
 
 [- TODO
     Linux/Windows:
 
-    [!script
+    [s:script
         ~~~
         var result;
         if ( OS.isWindows ) {

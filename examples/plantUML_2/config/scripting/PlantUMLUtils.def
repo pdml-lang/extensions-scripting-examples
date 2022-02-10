@@ -1,4 +1,4 @@
-[!def
+[s:def
     ~~~
     function insertPlantUMLImage ( name, plantUMLCode ) {
 

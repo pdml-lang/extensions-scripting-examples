@@ -15,21 +15,21 @@
 
     We can do this by using an expression node:
     [code
-        Latest update: [!exp timeUtils.currentLocalDate()]
+        Latest update: [s:exp timeUtils.currentLocalDate()]
     code]
     Now the date is updated whenever the document is parsed.
 
     [note
         The above function applies the [link url=https://en.wikipedia.org/wiki/ISO_8601 text="ISO 8601"] standard to format the date (i.e. YYYY-MM-DD).
-        [link url=[!get PDML_ext_ref_manual_url]#timeUtils text=timeUtils] provides other functions to get a specifically formatted date, time, or date/time pair.
+        [link url=[u:get PDML_ext_ref_manual_url]#timeUtils text=timeUtils] provides other functions to get a specifically formatted date, time, or date/time pair.
 
-        For example, if we wanted to also display the time (without seconds) we could use function [link url=[!get PDML_ext_ref_manual_url]#timeUtils-currentLocalDateTimeMinutes text=currentLocalDateTimeMinutes].
+        For example, if we wanted to also display the time (without seconds) we could use function [link url=[u:get PDML_ext_ref_manual_url]#timeUtils-currentLocalDateTimeMinutes text=currentLocalDateTimeMinutes].
         That function would return text like this: [c 2022-01-10 14:16]
     ]
 
-    Instead of using an expression node, we could also use a [c !script] node that calls function [link url=[!get PDML_ext_ref_manual_url]#doc-insertText text=doc.insertText]:
+    Instead of using an expression node, we could also use a [c s:script] node that calls function [link url=[u:get PDML_ext_ref_manual_url]#doc-insertText text=doc.insertText]:
     [code
-        Latest update: [!script doc.insertText ( timeUtils.currentLocalDate() );]
+        Latest update: [s:script doc.insertText ( timeUtils.currentLocalDate() );]
     code]
 
     [note

@@ -1,3 +1,3 @@
-[!exp icon("ok.png", "green")]
+[s:exp icon("ok.png", "green")]
 
-[!exp icon("not_ok.png", "red")]
+[s:exp icon("not_ok.png", "red")]

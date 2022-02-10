@@ -6,18 +6,18 @@
 
     URL:
     [-
-    Version: [!exp URLUtils.readText ( "http://www.example.com/version.txt" )]
-    Version: [!exp URLUtils.readText ( "https://www.pml-lang.dev/index.html" )]
+    Version: [s:exp URLUtils.readText ( "http://www.example.com/version.txt" )]
+    Version: [s:exp URLUtils.readText ( "https://www.pml-lang.dev/index.html" )]
     -]
 
     OS env.:
     Version: 7.4.0
 
     OS console:
-    Version: 123
+    Version: mi
 
     GUI:
-    Version: qwe
+    Version: gui
 
     JSON:
     Version: 7.4.0

@@ -4,8 +4,8 @@
 
     For example, an exam paper printed for students contains only questions, while the teachers' edition also contains the answers.
 
-    Here is a simple [!get PML_link] example to illustrate how this can be achieved.
-    [insert_code file=[!get examples_dir]conditional_text/input.pml]
+    Here is a simple [u:get PML_link] example to illustrate how this can be achieved.
+    [insert_code file=[u:get examples_dir]conditional_text/input.pml]
 
     When [c forTeachers] is set to [c true] (as in the code above), the document's content will be:
     [output

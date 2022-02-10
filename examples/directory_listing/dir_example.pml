@@ -1,4 +1,4 @@
-[!script
+[s:script
     ~~~
     const cmd = `@echo off
     dir C:\\temp`

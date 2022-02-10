@@ -18,12 +18,12 @@
         [el Execute a VB or OS script to send an email and add a log entry each time a new version of a document is published.]
     ]
 
-    To illustrate how it works, let's use [link url=https://plantuml.com/ text=PlantUML] to dynamically create diagrams and insert links to them into a [!get PML_link] markup document.
+    To illustrate how it works, let's use [link url=https://plantuml.com/ text=PlantUML] to dynamically create diagrams and insert links to them into a [u:get PML_link] markup document.
 
     PlantUML is an open-source tool you can use to create many different kinds of diagrams from plain text languages.
     For example, this plain text:
-    [!set plantUML_example_dir=[!get examples_dir]plantUML/]
-    [insert_code file=[!get plantUML_example_dir]resources/images/alice_bob.txt]
+    [u:set plantUML_example_dir=[u:get examples_dir]plantUML/]
+    [insert_code file=[u:get plantUML_example_dir]resources/images/alice_bob.txt]
     ... generates the following sequence diagram:
     [image source=images/alice_bob.png]
 
@@ -32,7 +32,7 @@
         [el
             Create file [c alice_bob.txt] with the following content:
             [caption File [c alice_bob.txt]]
-            [insert_code file=[!get plantUML_example_dir]resources/images/alice_bob.txt]
+            [insert_code file=[u:get plantUML_example_dir]resources/images/alice_bob.txt]
         ]
 
         [el
@@ -72,8 +72,8 @@
     ]
 
     Here is the code to achieve this:
-    [insert_code file=[!get plantUML_example_dir]config/scripting/alice_bob.def]
-    As can be seen, we first create the input file with [link url=[!get PDML_ext_ref_manual_url]#fileUtils-writeText text="fileUtils.writeText"], and then we use [link url=[!get PDML_ext_ref_manual_url]#OSCommand-runAndWait text="OSCommand.runAndWait"] to execute PlantUML.
+    [insert_code file=[u:get plantUML_example_dir]config/scripting/alice_bob.def]
+    As can be seen, we first create the input file with [link url=[u:get PDML_ext_ref_manual_url]#fileUtils-writeText text="fileUtils.writeText"], and then we use [link url=[u:get PDML_ext_ref_manual_url]#OSCommand-runAndWait text="OSCommand.runAndWait"] to execute PlantUML.
 
     The above script creates file [c resources/images/alice_bob.png], which can then be used like an ordinary image file with:
     [code
@@ -81,15 +81,15 @@
     code]
 
     A much better approach, useful if we need to create [i several] images, is to create a reusable [i function] that creates the image and insert it in the document with a call to [c doc.insert]:
-    [insert_code file=[!get plantUML_example_dir]config/scripting/PlantUMLUtils.def]
+    [insert_code file=[u:get plantUML_example_dir]config/scripting/PlantUMLUtils.def]
 
     Because this function might be useful in other documents, we can store it in a separate file named [c PlantUMLUtils.def].
 
-    Then we can import the function with an [c !ins-file] node and use it as follows:
+    Then we can import the function with an [c u:ins-file] node and use it as follows:
     [code
-        [!ins-file path = config/scripting/PlantUMLUtils.def]
+        [u:ins-file path = config/scripting/PlantUMLUtils.def]
         
-        [!script insertPlantUMLImage ( "alice_bob_2", `@startuml
+        [s:script insertPlantUMLImage ( "alice_bob_2", `@startuml
             Alice -> Bob: Hello
             Bob -> Alice: Hi
             @enduml` ); ]
@@ -103,9 +103,9 @@
 
     Here is a fully functioning example of a PML document, to give you a glimpse of what can be achieved:
     [caption File PlantUML_Demo.pml]
-    [insert_code file=[!get examples_dir]plantUML_2/PlantUML_Demo.pml]
+    [insert_code file=[u:get examples_dir]plantUML_2/PlantUML_Demo.pml]
 
-    If [!get PML_link] is installed on your system, you can execute the following command to create a HTML file in directory [c output]:
+    If [u:get PML_link] is installed on your system, you can execute the following command to create a HTML file in directory [c output]:
     [input
         pmlc PlantUML_Demo.pml
     input]
@@ -120,8 +120,8 @@
     Hence, we can provide a paramter to create the images only when needed.
     There are many ways to do this.
     One way would be to simply ask the user if the images should be created.
-    This can be done by changing our [c !def] node as follows:
-    [insert_code file=[!get examples_dir]plantUML/config/scripting/PlantUMLUtils_2.def]
+    This can be done by changing our [c s:def] node as follows:
+    [insert_code file=[u:get examples_dir]plantUML/config/scripting/PlantUMLUtils_2.def]
 
     Now, ech time the PML converter is launched, the user is asked if the images should be created:
     [image]

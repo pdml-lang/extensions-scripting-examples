@@ -1,10 +1,10 @@
 [doc [title PlantUML Demo]
 
-    [!ins-file path = config/scripting/PlantUMLUtils.def]
+    [u:ins-file path = config/scripting/PlantUMLUtils.def]
 
     Euler’s Identity, the most beautiful math equation:
 
-    [!script
+    [s:script
         ~~~
         insertPlantUMLImage ( "euler_identity",  `
         @startmath
@@ -15,7 +15,7 @@
 
     Time dilation in Einstein's special relativity:
 
-    [!script
+    [s:script
         ~~~
         insertPlantUMLImage ( "time_dilation",  `
         @startmath
@@ -26,7 +26,7 @@
 
     Brain boosters:
 
-    [!script
+    [s:script
         ~~~
         insertPlantUMLImage ( "brain_boosters",  `
         @startmindmap

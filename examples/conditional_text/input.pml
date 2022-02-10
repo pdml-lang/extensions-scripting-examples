@@ -1,10 +1,10 @@
 [doc [title Conditional Text Test]
 
-    [!def const forTeachers = true;]
+    [s:def const forTeachers = false;]
 
     Question: What is the answer?
 
-    [!script
+    [s:script
         ~~~
         if ( forTeachers ) {
             doc.insertText ( "Answer: The answer is 42." );

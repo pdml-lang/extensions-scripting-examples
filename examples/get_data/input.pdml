@@ -1,22 +1,22 @@
 [root
 
     File:
-    Version: [!exp fileUtils.readText ( "version.txt" )]
+    Version: [s:exp fileUtils.readText ( "version.txt" )]
 
     URL:
     [-
-    Version: [!exp URLUtils.readText ( "http://www.example.com/version.txt" )]
-    Version: [!exp URLUtils.readText ( "https://www.pml-lang.dev/index.html" )]
+    Version: [s:exp URLUtils.readText ( "http://www.example.com/version.txt" )]
+    Version: [s:exp URLUtils.readText ( "https://www.pml-lang.dev/index.html" )]
     -]
 
     OS env.:
-    Version: [!exp OSEnvUtils.getVar ( "MY_APP_VERSION" )]
+    Version: [s:exp OSEnvUtils.getVar ( "MY_APP_VERSION" )]
 
     OS console:
-    Version: [!exp OSConsole.askString ( "Please enter version number: " )]
+    Version: [s:exp OSConsole.askString ( "Please enter version number: " )]
 
     GUI:
-    Version: [!exp GUIUtils.askString ( "Please enter version number: " )]
+    Version: [s:exp GUIUtils.askString ( "Please enter version number: " )]
 
     JSON:
     [!script
@@ -28,11 +28,11 @@
         ~~~
     ]
 
-    Version: [!exp JSON.parse ( fileUtils.readText ( "config.json" ) ).version]
+    Version: [s:exp JSON.parse ( fileUtils.readText ( "config.json" ) ).version]
 
     OS command:
-    Version: [!exp OSCommand.textPipe ( \[ "my_app.bat" \], null )]
+    Version: [s:exp OSCommand.textPipe ( \[ "my_app.bat" \], null )]
 
     OS script:
-    Version: [!exp WinCmdUtils.getInstructionsOutput ( "@echo off && echo 7.4.0", null, null )]
+    Version: [s:exp WinCmdUtils.getInstructionsOutput ( "@echo off && echo 7.4.0", null, null )]
 ]

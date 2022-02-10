@@ -1,4 +1,4 @@
-[!def
+[s:def
     ~~~
     const defaultTagStartPrefix = "start:_";
     const defaultTagEndPrefix   = "end:_";
